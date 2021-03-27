@@ -1,0 +1,17 @@
+.container {
+  align-items: center;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 400px;
+  padding: 40px 0px;
+}
+
+.table-header-cell {
+  font-weight: bold !important;
+}
+
+.title {
+  color: #01579b;
+  margin-bottom: 40px !important;
+}
