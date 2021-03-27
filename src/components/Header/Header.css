@@ -1,0 +1,27 @@
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.MuiToolbar-root {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links-container {
+  display: flex;
+  flex: 70;
+  justify-content: space-evenly;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
+.logo-container {
+  display: flex;
+  flex: 30;
+  justify-content: center;
+}

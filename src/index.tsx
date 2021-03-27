@@ -1,12 +1,16 @@
+// Libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+// Styles
 import './index.css';
-import App from './App';
+// Modules
+import AppContainer from './modules/AppContainer/AppContainer';
+// Others
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppContainer />
   </React.StrictMode>,
   document.getElementById('root')
 );
