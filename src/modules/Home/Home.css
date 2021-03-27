@@ -1,0 +1,23 @@
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.container {
+  align-items: center;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 400px;
+  padding: 40px 0px;
+}
+
+.MuiButtonBase-root {
+  margin: 15px 5px !important;
+}
+
+.title {
+  color: #01579b;
+}
