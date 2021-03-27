@@ -1,4 +1,7 @@
 // Libraries
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+// Material components
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -8,20 +11,24 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
+// Types
+import { UserActionsType } from '../../reducers/User/UserSaga';
 // Styles
 import './Users.css';
 
 const headings: string[] = ['Nombre Completo', 'Género', 'Email'];
 
-const data: any[] = [
-  { firstName: 'Candy Octavia', lastName: 'Walters', gender: 'female', email: 'candy@yopmail.com' },
-  { firstName: 'Owen', lastName: 'Love', gender: 'male', email: 'owen@yopmail.com' },
-  { firstName: 'Otis Star', lastName: 'Cruz', gender: 'other', email: 'otis@yopmail.com' },
-  { firstName: 'Lynda', lastName: 'Newton', gender: 'female', email: 'lynda@yopmail.com' },
-  { firstName: 'Charissa', lastName: 'Wells', gender: 'female', email: 'charissa@yopmail.com' },
-];
-
 const Users = () => {
+
+  const dispatch = useDispatch();
+  const dataUsers: User[] = useSelector((state: RootState) => state.user.data);
+
+  useEffect(() => {
+    // Replace componentDidMount
+    dispatch({ type: UserActionsType.FETCH_USERS });
+  }, [dispatch]);
+
+
   return (
     <Container maxWidth="md" className="container">
       <Typography variant="h2" className="title">Usuarios</Typography>
@@ -35,7 +42,7 @@ const Users = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((user: any, id: number) => (
+            {dataUsers.map((user: any, id: number) => (
               <TableRow key={user.firstName + id}>
                 <TableCell component="th" scope="row" align="center">
                   {`${user.firstName} ${user.lastName}`}
