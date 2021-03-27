@@ -14,8 +14,8 @@ const Header = () => {
           <img src={logo} className="logo" alt="logo" />
         </a>
         <div className="links-container">
-          <a href="/">Usuarios</a>
-          <a href="/">Ubicaciones</a>
+          <a href="/usuarios">Usuarios</a>
+          <a href="/ubicaciones">Ubicaciones</a>
         </div>
       </Toolbar>
     </AppBar>
